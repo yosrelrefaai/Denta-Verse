@@ -37,9 +37,9 @@ export default function HeroSection(){
                 <p className='  text-base text-gray-700 font-medium py-10 leading-8'>  أهلًا بيك في عالم دنتافرس، جاهز عشان تخوض معانا رحلة استكشافية مميزة مليانة بالتحديّات والمتعة والمغامرات؟ عالم هتعرف فيه سر الابتسامة
                 لو لسه متردد فصديقنا باسم هيشجّعك، تحب تعرَف عن عالمنا وعن بطلنا وتكون إنت البطل الجديد؟ </p>
                 <div className="flex flex-col  sm:flex-row gap-12 lg:gap-4" >
-                  <Link to="/game">
+                  <a href="https://mohamed-saeid.itch.io/endlessrunner">
                 <button className='bg-gradient-to-r from-teal-custom-Poppy to-teal-custom-orange rounded-full text-white text-base p-3 font-semibold transition-all duration-500  tranform hover:scale-105'>ابدأ اللعب الآن</button>   
-                </Link>
+                </a>
                 <a href='https://forms.gle/vEnMFX7NyLaFUp83A' target='blank'>
                 <button className='bg-white animate-bounce text-teal-custom-green border-teal-custom-green border-2 rounded-full text-base p-3 font-semibold transition-all duration-500  tranform hover:scale-105 mx-7'> ابدأ التحدي الان   </button>   
                 </a>
