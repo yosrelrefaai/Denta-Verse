@@ -5,10 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 import TagManager from 'react-gtm-module';
+import ReactGA from "react-ga4";
 const tagManagerArgs = {
   gtmId: 'GTM-MD6W7G2V' 
 };
 TagManager.initialize(tagManagerArgs);
+ReactGA.initialize("G-VY7SR4146Y"); 
+ReactGA.send("pageview"); 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
