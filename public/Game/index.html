@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | MYDentaVerse</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+      /* إضافة أنماط لتحسين تجربة اللمس */
+      #unity-canvas {
+        touch-action: none; /* تعطيل سلوك اللمس الافتراضي للمتصفح */
+        -webkit-tap-highlight-color: transparent; /* إزالة التأثير الأزرق عند اللمس على بعض الأجهزة */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=600 height=960 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">MYDentaVerse</div>
+      </div>
+    </div>
+    <script>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var warningBanner = document.querySelector("#unity-warning");
+
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/final level.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/final level.data",
+        frameworkUrl: buildUrl + "/final level.framework.js",
+        codeUrl: buildUrl + "/final level.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "MYDentaVerse",
+        productVersion: "1.0",
+        showBanner: unityShowBanner,
+      };
+
+      // دالة للتحقق مما إذا كان الجهاز يدعم اللمس
+      function isTouchDevice() {
+        return (('ontouchstart' in window) ||
+          (navigator.maxTouchPoints > 0) ||
+          (navigator.msMaxTouchPoints > 0));
+      }
+
+      // تكوين إعدادات بناءً على نوع الجهاز
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || isTouchDevice()) {
+        // إعدادات للأجهزة المحمولة
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+        canvas.className = "unity-mobile";
+
+        // إضافة مستمعين لأحداث اللمس (اختياري - يمكن التعامل معها في Unity أيضًا)
+        canvas.addEventListener('touchstart', function(e) {
+          e.preventDefault(); // منع السلوك الافتراضي
+        }, { passive: false });
+        
+        canvas.addEventListener('touchmove', function(e) {
+          e.preventDefault(); // منع السلوك الافتراضي
+        }, { passive: false });
+        
+        canvas.addEventListener('touchend', function(e) {
+          e.preventDefault(); // منع السلوك الافتراضي
+        }, { passive: false });
+
+        // يمكنك تقليل دقة البكسل لتحسين الأداء على الأجهزة المحمولة
+        config.devicePixelRatio = 1;
+        
+        // إظهار رسالة للمستخدم أن اللعبة تدعم اللمس
+        unityShowBanner("Touch controls enabled", "warning");
+      } else {
+        // إعدادات لأجهزة الكمبيوتر
+        canvas.style.width = "600px";
+        canvas.style.height = "960px";
+      }
+
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+          
+          // إرسال معلومات نوع الجهاز إلى Unity إذا لزم الأمر
+          if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || isTouchDevice()) {
+            unityInstance.SendMessage('GameManager', 'SetDeviceType', 'mobile');
+          } else {
+            unityInstance.SendMessage('GameManager', 'SetDeviceType', 'desktop');
+          }
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>
