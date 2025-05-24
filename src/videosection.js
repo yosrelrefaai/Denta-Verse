@@ -14,7 +14,9 @@ export default function Videosection(){
           هنا هتلاقي فيديوهات ممتعة وبسيطة بتشرحلك إزاي تحافظ على أسنانك وتتعلم الحاجات المهمة علشان تفضل ابتسامتك دايمًا حلوة!
 <br></br> كل فيديو قصير ومفيد، ومشاهدة الفيديوهات دي هي أول خطوة لازم تعملها قبل ما تبدأ تحل التحديات!<br></br>
 جاهز؟ شغّل أول فيديو وابدأ تتعلّم!
+وكمان تقدر تتابعنا من خلال التيك توك
           </p>
+          <div className='flex flex-col  sm:flex-row gap-12 lg:gap-4'>
           <Link to="/videoes">
           <button
           className="bg-gradient-to-r from-teal-custom-Poppy to-teal-custom-orange rounded-full text-white text-base p-3 font-semibold transition-all duration-500 tranform hover:scale-105"
@@ -23,6 +25,15 @@ export default function Videosection(){
           شاهدالآن
         </button>
         </Link>
+        <a href='https://www.tiktok.com/@denta.verse?_t=ZS-8wYIzxY8vMG&_r=1'>
+          <button
+          className="bg-gradient-to-r from-teal-custom-Poppy to-teal-custom-orange rounded-full text-white text-base p-3 font-semibold transition-all duration-500 tranform hover:scale-105"
+        >
+          
+          تيك توك
+        </button>
+        </a>
+        </div>
                </div>
          
                {/* Left div - الأسئلة */}

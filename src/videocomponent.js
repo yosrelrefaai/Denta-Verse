@@ -20,6 +20,14 @@ export default function Videocomponent(){
         <br></br> كل فيديو قصير ومفيد، ومشاهدة الفيديوهات دي هي أول خطوة لازم تعملها قبل ما تبدأ تحل التحديات!<br></br>
         جاهز؟ شغّل أول فيديو وابدأ تتعلّم!
                   </p>
+                  <a href='https://www.tiktok.com/@denta.verse?_t=ZS-8wYIzxY8vMG&_r=1'>
+          <button
+          className="bg-gradient-to-r from-teal-custom-Poppy to-teal-custom-orange rounded-full text-white text-base p-3 font-semibold transition-all duration-500 tranform hover:scale-105"
+        >
+          
+          اعرف أكتر
+        </button>
+        </a>
                        </div>
                      </div>
 

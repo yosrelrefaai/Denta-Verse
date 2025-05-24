@@ -7,7 +7,7 @@ import ThirdChallenge from './ThirdChallenge';
 import Strongteeeth from './Strongteeth';
 import Weakteeth from './Weakteeth';
 import Videocomponent from './videocomponent';
-import ProtectedRoute from './ProtectedRoute';
+
 import Footer from './Footer';
 
 import { Route,Link,Routes } from 'react-router-dom';
