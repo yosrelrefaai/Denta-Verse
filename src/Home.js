@@ -4,19 +4,23 @@ import SecondSection from "./SecondSection";
 import ThirdSection from "./thirdSection";
 import UserQuestion from "./UserQuestions";
 import Videosection from "./videosection";
+import { Link } from "react-router-dom";
+
+
 import Aboutus from './Aboutus'
 
 export default function Home(){
+
+
     return(
         <>
             <HeroSection/>
             <Aboutus/>
             <SecondSection/>
             <Videosection/>
-            <ThirdSection/>
+            <ThirdSection />
             <UserQuestion/>
             <Accordion/>
-            
         </>
     )
 }

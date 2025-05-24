@@ -1,49 +1,71 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { datathirdchallenge } from "./datathirdchallenge";
+import { auth, db } from "./Firebase"; 
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 
 export default function ThirdChallenge() {
   const [index, setindex] = useState(0);
-  const [question, setQuestion] = useState(datathirdchallenge [index]);
+  const [question, setQuestion] = useState(datathirdchallenge[index]);
   const [lock, setlock] = useState(false);
   const [score, setScore] = useState(0);
   const [result, setResult] = useState(false);
-  const [selectedAnswer, setSelectedAnswer] = useState(null); 
-    
-    const checkAns = (ans) => {
-      if (!lock) {
-        if (question.ans === ans) {
-          setScore((prev) => prev + 1);
-          setSelectedAnswer(ans); 
-        } else {
-          setSelectedAnswer(ans); 
-        }
-        setlock(true);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+
+  // 🟢 دالة حفظ السكور على الفايرستور
+  const saveScoreToFirestore = async () => {
+    const user = auth.currentUser;
+    if (user) {
+      const userRef = doc(db, "challenge", user.uid);
+      try {
+        const docSnap = await getDoc(userRef);
+        const currentScore = docSnap.exists() ? docSnap.data().score || 0 : 0;
+
+        await updateDoc(userRef, {
+          score: currentScore + score, // جمع السكور الجديد مع القديم
+        });
+
+        console.log("✅ تم تجميع السكور وحفظه");
+      } catch (error) {
+        console.error("❌ فشل حفظ السكور:", error);
       }
-    };
-  
-    const next = () => {
-        if (lock) {
-          if (index === datathirdchallenge.length - 1) {
-            setResult(true);
-            return;
-          }
-          const newIndex = index + 1;
-          setindex(newIndex);
-          setQuestion(datathirdchallenge[newIndex]);
-          setlock(false);
-          setSelectedAnswer(null); 
-        }
-      };
-    
-  
-    const reset = () => {
-      setindex(0);
-      setQuestion(datathirdchallenge[0]);
+    }
+  };
+
+  const checkAns = (ans) => {
+    if (!lock) {
+      if (question.ans === ans) {
+        setScore((prev) => prev + 1);
+        setSelectedAnswer(ans);
+      } else {
+        setSelectedAnswer(ans);
+      }
+      setlock(true);
+    }
+  };
+
+  const next = () => {
+    if (lock) {
+      if (index === datathirdchallenge.length - 1) {
+        setResult(true);
+        saveScoreToFirestore(); // 🟢 استدعاء حفظ السكور بعد آخر سؤال
+        return;
+      }
+      const newIndex = index + 1;
+      setindex(newIndex);
+      setQuestion(datathirdchallenge[newIndex]);
       setlock(false);
-      setScore(0);
-      setResult(false);
-      setSelectedAnswer(null); 
-    };
+      setSelectedAnswer(null);
+    }
+  };
+
+  const reset = () => {
+    setindex(0);
+    setQuestion(datathirdchallenge[0]);
+    setlock(false);
+    setScore(0);
+    setResult(false);
+    setSelectedAnswer(null);
+  };
 
   return (
     <div className="px-4 py-10 sm:px-10 sm:py-20 md:px-20 md:py-32 lg:p-40 bg-gradient-to-t from-teal-custom-DarkCayan to-teal-custom-green flex justify-center">
@@ -66,30 +88,21 @@ export default function ThirdChallenge() {
               {index + 1}. {question.question}
             </h3>
             <ul>
-              <li
-                className={`border-2 border-[#707070] p-2 rounded-lg mb-3 cursor-pointer ${selectedAnswer === 1 ? (question.ans === 1 ? "border-green-300 bg-green-200" : "border-red-300 bg-red-200") : ""}`}
-                onClick={() => checkAns(1)}
-              >
-                {question.option1}
-              </li>
-              <li
-                 className={`border-2 border-[#707070] p-2 rounded-lg mb-3 cursor-pointer ${selectedAnswer === 2 ? (question.ans === 2 ? "border-green-300 bg-green-200" : "border-red-300 bg-red-200") : ""}`}
-                 onClick={() => checkAns(2)}
-              >
-                {question.option2}
-              </li>
-              <li
-                 className={`border-2 border-[#707070] p-2 rounded-lg mb-3 cursor-pointer ${selectedAnswer === 3 ? (question.ans === 3 ? "border-green-300 bg-green-200" : "border-red-300 bg-red-200") : ""}`}
-                 onClick={() => checkAns(3)}
-              >
-                {question.option3}
-              </li>
-              <li
-                 className={`border-2 border-[#707070] p-2 rounded-lg mb-3 cursor-pointer ${selectedAnswer === 4 ? (question.ans === 4 ? "border-green-300 bg-green-200" : "border-red-300 bg-red-200") : ""}`}
-                 onClick={() => checkAns(4)}
-              >
-                {question.option4}
-              </li>
+              {[1, 2, 3, 4].map((num) => (
+                <li
+                  key={num}
+                  className={`border-2 border-[#707070] p-2 rounded-lg mb-3 cursor-pointer ${
+                    selectedAnswer === num
+                      ? question.ans === num
+                        ? "border-green-300 bg-green-200"
+                        : "border-red-300 bg-red-200"
+                      : ""
+                  }`}
+                  onClick={() => checkAns(num)}
+                >
+                  {question[`option${num}`]}
+                </li>
+              ))}
             </ul>
             <button
               onClick={next}

@@ -5,6 +5,9 @@ export default function ThirdSection(){
         <div className="px-4 md:px-24 py-28" id="challenges"> 
           <div>
             <h2 className="text-3xl text-teal-custom-DarkCayan font-bold  align-middle flex justify-center">التحديات</h2>
+            <p className='  text-base text-gray-700 font-medium py-10 leading-8 text-center'>
+              سجل دخول عشان تعرف مستواك من أعلي خمس لاعبين
+          </p>
           </div>
           {/* div contains three cards*/}
           <div className="flex justify-center flex-col md:flex-row gap-6 md:gap-12 py-10">
@@ -35,6 +38,11 @@ export default function ThirdSection(){
                 <button className='bg-gradient-to-r from-teal-custom-Poppy to-teal-custom-orange rounded-full text-white text-base p-3 font-semibold transition-all duration-500 tranform hover:scale-105'>ابدأ الان</button> 
                 </Link>  
             </div>
+          </div>
+          <div className='flex justify-center'>
+            <Link to ='/leaderboard'>
+            <button className='bg-gradient-to-r from-teal-custom-Poppy to-teal-custom-orange rounded-full text-white text-base p-3 font-semibold transition-all duration-500 tranform hover:scale-105' > عرض مستواك </button> 
+            </Link> 
           </div>
         </div>
     )

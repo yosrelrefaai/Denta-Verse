@@ -1,4 +1,4 @@
- import team from './images/Team (2).jpeg'
+ import team from './images/team (2) (1).jpeg'
  export default function Aboutus(){
     return(
 <div className=" px-24 py-28 flex flex-col md:flex-row gap-8 md:gap-12 px-4 md:px-24 py-7 md:py-28 bg-white">

@@ -7,12 +7,17 @@ import ThirdChallenge from './ThirdChallenge';
 import Strongteeeth from './Strongteeth';
 import Weakteeth from './Weakteeth';
 import Videocomponent from './videocomponent';
+import ProtectedRoute from './ProtectedRoute';
 import Footer from './Footer';
 
 import { Route,Link,Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import logobw from './images/logob&w.png';
 import GamePage from './GamePage';
+import Login from './Login';
+import Signup from './Signup.';
+import ThirdSection from './thirdSection';
+import Leaderbord from './leaderboard';
 
 function App() {
   const[loading,setloading]=useState(true);
@@ -35,6 +40,7 @@ function App() {
     )
   }
   return (
+    
       <div>
         <Header/>
         <Routes>
@@ -45,7 +51,11 @@ function App() {
           <Route path='/strongteeth'  element={<Strongteeeth/>}/>
            <Route path='/weakteeth'  element={<Weakteeth/>}/>
            <Route path='/videoes'  element={<Videocomponent/>}/>
+           <Route path='/login'  element={<Login/>}/>
+            <Route path='/signup'  element={<Signup/>}/>
            <Route path='/game'  element={<GamePage/>}/>
+           <Route path= '/leaderboard' element={<Leaderbord/>}/>
+       
         </Routes>
          <Footer/>
       </div>
