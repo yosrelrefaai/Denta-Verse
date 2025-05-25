@@ -1,11 +1,12 @@
 import video from './images/video.jpeg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function Videocomponent(){
     return(
         <div>
         <div className=" px-24 py-28 flex flex-col md:flex-row gap-8 md:gap-40 px-4 md:px-24 py-7 md:py-28 bg-white">
                        {/* Right div - العنوان */}
                        <div className="pt-10 md:w-1/2 w-full flex flex-col justify-center md:block">
-                        <img src={video} alt="Video Section" className='rounded-2xl max-w-md h-auto '></img>
+                        <LazyLoadImage src={video} alt="Video Section" className='rounded-2xl max-w-md h-auto '/>
                        
                        </div>
                  

@@ -7,16 +7,13 @@ import ThirdChallenge from './ThirdChallenge';
 import Strongteeeth from './Strongteeth';
 import Weakteeth from './Weakteeth';
 import Videocomponent from './videocomponent';
-
 import Footer from './Footer';
-
-import { Route,Link,Routes } from 'react-router-dom';
+import { Route,Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import logobw from './images/logob&w.png';
 import GamePage from './GamePage';
 import Login from './Login';
 import Signup from './Signup.';
-import ThirdSection from './thirdSection';
 import Leaderbord from './leaderboard';
 
 function App() {
