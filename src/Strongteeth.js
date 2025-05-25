@@ -11,6 +11,7 @@ import milk from './images/milk (1).jpeg';
 import tea from './images/tea (1).jpeg';
 import water from './images/water (1).jpeg';
 import gum from './images/gumm (1).jpeg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Strongteeth(){
     return(
@@ -18,7 +19,7 @@ export default function Strongteeth(){
         <div className="px-24 py-28 flex flex-col md:flex-row gap-8 md:gap-10 px-4 md:px-24 py-7 md:py-28 bg-white">
                 {/* Right div - العنوان */}
                 <div className="md:w-1/2 w-full flex justify-center md:block">
-                 <img src={strongtheet} className="max-w-md h-auto rounded-lg"/>
+                 <LazyLoadImage alt='strongtheet' src={strongtheet} className="max-w-md h-auto rounded-lg"/>
                 </div>
           
                 {/* Left div - الأسئلة */}
@@ -37,7 +38,7 @@ export default function Strongteeth(){
                          <div className="w-64 h-80 [perspective:1000px] ">
                            <div className=" relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                               <div className="absolute w-full h-full [backface-visibility:hidden] bg-white/50 border border-teal-custom-orange rounded-2xl flex  flex-col items-center justify-center">
-                              <img src={strawbarry} alt="strawbarry" className="w-52 h-52 object-cover rounded-md"></img>
+                              <LazyLoadImage src={strawbarry} alt="strawbarry" className="w-52 h-52 object-cover rounded-md"/>
                            <h3 className="text-teal-custom-orange px-5 py-5 text-center text-lg font-semibold "> الفراولة </h3>
                               </div>
                               <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/60 border border-teal-custom-orange rounded-lg shadow-lg flex items-center justify-center text-gray-700 text-center px-4">
@@ -49,7 +50,7 @@ export default function Strongteeth(){
                            <div className=" w-64 h-80 [perspective:1000px] ">
                            <div className=" relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                               <div className="absolute w-full h-full [backface-visibility:hidden] bg-white/50 border border-teal-custom-orange rounded-2xl flex  flex-col items-center justify-center">
-                              <img src={kiwi} alt="kiwi" className="w-52 h-52 object-cover rounded-md"></img>
+                              <LazyLoadImage src={kiwi} alt="kiwi" className="w-52 h-52 object-cover rounded-md"/>
                               <h3 className="text-teal-custom-orange px-5 py-5 text-center text-lg font-semibold "> الكيوي </h3>
                               </div>
                               <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/60 border border-teal-custom-orange rounded-lg shadow-lg flex items-center justify-center text-gray-700 text-center px-4">
@@ -61,7 +62,7 @@ export default function Strongteeth(){
                            <div className=" w-64 h-80 [perspective:1000px] ">
                            <div className=" relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                               <div className="absolute w-full h-full [backface-visibility:hidden] bg-white/50 border border-teal-custom-orange rounded-2xl flex  flex-col items-center justify-center">
-                              <img src={gums} alt="gums" className="w-52 h-52 object-cover rounded-md"></img>
+                              <LazyLoadImage src={gums} alt="gums" className="w-52 h-52 object-cover rounded-md"/>
                               <h3 className="text-teal-custom-orange px-5 py-5 text-center text-lg font-semibold "> الكمثري </h3>
                               </div>
                               <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/60 border border-teal-custom-orange rounded-lg shadow-lg flex items-center justify-center text-gray-700 text-center px-4">
@@ -73,7 +74,7 @@ export default function Strongteeth(){
                            <div className="w-64 h-80 [perspective:1000px] ">
                            <div className="  relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                               <div className="absolute w-full h-full [backface-visibility:hidden] bg-white/50 border border-teal-custom-orange rounded-2xl flex  flex-col items-center justify-center">
-                              <img src={watermelon} alt="watermelon" className="w-52 h-52 object-cover rounded-md"></img>
+                              <LazyLoadImage src={watermelon} alt="watermelon" className="w-52 h-52 object-cover rounded-md"/>
                               <h3 className="text-teal-custom-orange  text-center text-lg font-semibold px-5  py-5"> البطيخ والعنب </h3>
                               </div>
                               <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/60 border border-teal-custom-orange rounded-lg shadow-lg flex items-center justify-center text-gray-700 text-center px-4">
@@ -85,7 +86,7 @@ export default function Strongteeth(){
                            <div className="w-64 h-80 [perspective:1000px] ">
                            <div className="  relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                               <div className="absolute w-full h-full [backface-visibility:hidden] bg-white/50 border border-teal-custom-orange rounded-2xl flex  flex-col items-center justify-center">
-                              <img src={carrots} alt="carrots" className="w-52 h-52 object-cover rounded-md"></img>
+                              <LazyLoadImage src={carrots} alt="carrots" className="w-52 h-52 object-cover rounded-md"/>
                               <h3 className="text-teal-custom-orange  text-center text-lg font-semibold px-5  py-5"> الجزر النيء</h3>
                               </div>
                               <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/60 border border-teal-custom-orange rounded-lg shadow-lg flex items-center justify-center text-gray-700 text-center px-4">
@@ -97,7 +98,7 @@ export default function Strongteeth(){
                            <div className="w-64 h-80 [perspective:1000px] ">
                            <div className="  relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                               <div className="absolute w-full h-full [backface-visibility:hidden] bg-white/50 border border-teal-custom-orange rounded-2xl flex  flex-col items-center justify-center">
-                              <img src={greens} alt="greens" className="w-52 h-52 object-cover rounded-md"></img>
+                              <LazyLoadImage src={greens} alt="greens" className="w-52 h-52 object-cover rounded-md"/>
                               <h3 className="text-teal-custom-orange  text-center text-lg font-semibold px-5  py-5"> الكرفس</h3>
                               </div>
                               <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/60 border border-teal-custom-orange rounded-lg shadow-lg flex items-center justify-center text-gray-700 text-center px-4">
@@ -109,7 +110,7 @@ export default function Strongteeth(){
                            <div className="w-64 h-80 [perspective:1000px] ">
                            <div className="  relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                               <div className="absolute w-full h-full [backface-visibility:hidden] bg-white/50 border border-teal-custom-orange rounded-2xl flex  flex-col items-center justify-center">
-                              <img src={Broccoli} alt="Broccoli" className="w-52 h-52 object-cover rounded-md"></img>
+                              <LazyLoadImage src={Broccoli} alt="Broccoli" className="w-52 h-52 object-cover rounded-md"/>
                               <h3 className="text-teal-custom-orange  text-center text-lg font-semibold px-5  py-5"> البروكلي والسبانخ</h3>
                               </div>
                               <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/60 border border-teal-custom-orange rounded-lg shadow-lg flex items-center justify-center text-gray-700 text-center px-4">
@@ -121,7 +122,7 @@ export default function Strongteeth(){
                            <div className="w-64 h-80 [perspective:1000px] ">
                            <div className="  relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                               <div className="absolute w-full h-full [backface-visibility:hidden] bg-white/50 border border-teal-custom-orange rounded-2xl flex  flex-col items-center justify-center">
-                              <img src={onions} alt="onions" className="w-52 h-52 object-cover rounded-md"></img>
+                              <LazyLoadImage src={onions} alt="onions" className="w-52 h-52 object-cover rounded-md"/>
                               <h3 className="text-teal-custom-orange  text-center text-lg font-semibold px-5  py-5">البصل الني ء</h3>
                               </div>
                               <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/60 border border-teal-custom-orange rounded-lg shadow-lg flex items-center justify-center text-gray-700 text-center px-4">
@@ -133,7 +134,7 @@ export default function Strongteeth(){
                            <div className="w-64 h-80 [perspective:1000px] ">
                            <div className="  relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                               <div className="absolute w-full h-full [backface-visibility:hidden] bg-white/50 border border-teal-custom-orange rounded-2xl flex  flex-col items-center justify-center">
-                              <img src={milk} alt="milk" className="w-52 h-52 object-cover rounded-md"></img>
+                              <LazyLoadImage src={milk} alt="milk" className="w-52 h-52 object-cover rounded-md"/>
                               <h3 className="text-teal-custom-orange  text-center text-lg font-semibold px-5  py-5" > الجبن ومنتجات الألبان  </h3>
                               </div>
                               <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/60 border border-teal-custom-orange rounded-lg shadow-lg flex items-center justify-center text-gray-700 text-center px-4">
@@ -145,7 +146,7 @@ export default function Strongteeth(){
                           <div className="w-64 h-80 [perspective:1000px] ">
                            <div className="  relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                               <div className="absolute w-full h-full [backface-visibility:hidden] bg-white/50 border border-teal-custom-orange rounded-2xl flex  flex-col items-center justify-center">
-                              <img src={tea} alt="tea" className="w-52 h-52 object-cover rounded-md"></img>
+                              <LazyLoadImage src={tea} alt="tea" className="w-52 h-52 object-cover rounded-md"/>
                               <h3 className="text-teal-custom-orange  text-center text-lg font-semibold px-5  py-5" > الشاي الأخضر والأسود </h3>
                               </div>
                               <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/60 border border-teal-custom-orange rounded-lg shadow-lg flex items-center justify-center text-gray-700 text-center px-4">
@@ -157,7 +158,7 @@ export default function Strongteeth(){
                           <div className="w-64 h-80 [perspective:1000px] ">
                            <div className="  relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                               <div className="absolute w-full h-full [backface-visibility:hidden] bg-white/50 border border-teal-custom-orange rounded-2xl flex  flex-col items-center justify-center">
-                              <img src={water} alt="water" className="w-52 h-52 object-cover rounded-md"></img>
+                              <LazyLoadImage src={water} alt="water" className="w-52 h-52 object-cover rounded-md"/>
                               <h3 className="text-teal-custom-orange  text-center text-lg font-semibold px-5  py-5" > الماء </h3>
                               </div>
                               <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/60 border border-teal-custom-orange rounded-lg shadow-lg flex items-center justify-center text-gray-700 text-center px-4">
@@ -169,7 +170,7 @@ export default function Strongteeth(){
                           <div className="w-64 h-80 [perspective:1000px] ">
                            <div className="  relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                               <div className="absolute w-full h-full [backface-visibility:hidden] bg-white/50 border border-teal-custom-orange rounded-2xl flex  flex-col items-center justify-center">
-                              <img src={gum} alt="gum" className="w-52 h-52 object-cover rounded-md"></img>
+                              <LazyLoadImage src={gum} alt="gum" className="w-52 h-52 object-cover rounded-md"/>
                               <h3 className="text-teal-custom-orange  text-center text-lg font-semibold px-5  py-5" > علكة بدون سكر  </h3>
                               </div>
                               <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/60 border border-teal-custom-orange rounded-lg shadow-lg flex items-center justify-center text-gray-700 text-center px-4">
