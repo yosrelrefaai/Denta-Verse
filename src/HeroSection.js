@@ -1,6 +1,6 @@
 
 import { TypeAnimation } from 'react-type-animation';
-import motion from './images/Bassem.png';
+import motion from './images/Bassem.jpeg';
 import { Link } from 'react-router-dom';
 export default function HeroSection(){
     return(

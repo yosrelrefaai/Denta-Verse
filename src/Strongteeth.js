@@ -2,7 +2,7 @@ import strongtheet from './images/strongteeth (2).jpeg'
 import strawbarry from './images/strawbarry (1).jpeg';
 import kiwi from './images/kiwi.jpeg';
 import gums from './images/Gums.jpeg';
-import carrots from './images/carrots.jpeg';
+import carrots from './images/carrot.jpeg';
 import greens from './images/greens.jpeg'
 import watermelon from './images/watermelon.jpeg';
 import Broccoli from './images/Broccoli (1).jpeg';
