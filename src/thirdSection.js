@@ -1,4 +1,5 @@
 import healthyfood from './images/healthyFood.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 export default function ThirdSection(){
     return(
@@ -13,7 +14,7 @@ export default function ThirdSection(){
           <div className="flex justify-center flex-col md:flex-row gap-6 md:gap-12 py-10">
              {/* first card*/}
             <div className="h-auto w-full md:max-w-sm flex-1 border-red-600 border-2 bg-red-300/40 rounded-r-lg  md:rounded-r-lg p-3 flex flex-col justify-center items-center gap-3 transition-all duration-500 hover:scale-105 hover:shadow-md">
-                <img src={healthyfood} className="w-44 h-44"></img>
+                <LazyLoadImage src={healthyfood} alt='challenges' className="w-44 h-44"/>
                 <h4 className="text-xl font-medium font-semibold text-black"> اختبر أكلك </h4>
   
                 <Link to="/challenge1">
@@ -22,7 +23,7 @@ export default function ThirdSection(){
             </div>
              {/* second card*/}
              <div className="h-auto w-full md:max-w-sm flex-1 border-red-600 border-2 bg-red-300/40 rounded-lg md:rounded-none p-3 flex flex-col justify-center items-center gap-3 transition-all duration-500 hover:scale-105 hover:shadow-md">
-                <img src={healthyfood} className="w-44 h-44"></img>
+                <LazyLoadImage src={healthyfood} alt='challenges' className="w-44 h-44"/>
                 <h4 className="text-xl font-medium font-semibold text-black" >   تقدر تحافظ على ابتسامتك ؟  </h4>
                 
                 <Link to="/challenge2">
@@ -31,7 +32,7 @@ export default function ThirdSection(){
             </div>
              {/* third card*/}
              <div className="h-auto w-full md:max-w-sm flex-1 border-red-600 border-2 bg-red-300/40 rounded-l-lg md:rounded-l-lg p-3 flex flex-col justify-center items-center gap-3 transition-all duration-500 hover:scale-105 hover:shadow-md">
-                <img src={healthyfood} className="w-44 h-44"></img>
+                <LazyLoadImage src={healthyfood} alt='challenges' className="w-44 h-44"/>
                 <h4 className="text-xl font-medium font-semibold text-black"> تعرف </h4>
                 
                 <Link to="/challenge3">

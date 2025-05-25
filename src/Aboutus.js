@@ -1,10 +1,11 @@
  import team from './images/team (2) (1).jpeg'
+ import { LazyLoadImage } from 'react-lazy-load-image-component';
  export default function Aboutus(){
     return(
 <div className=" px-24 py-28 flex flex-col md:flex-row gap-8 md:gap-12 px-4 md:px-24 py-7 md:py-28 bg-white">
         {/* Right div - العنوان */}
         <div className="md:w-1/2 w-full flex justify-center md:block">
-            <img src={team} alt="Video Section" className='rounded-2xl max-w-md h-auto '></img>
+            <LazyLoadImage src={team} alt="Team" className='rounded-2xl max-w-md h-auto '/>
         </div>
   
         {/* Left div - الأسئلة */}

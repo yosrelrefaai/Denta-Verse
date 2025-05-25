@@ -1,6 +1,7 @@
 import { useState } from "react";
 import askdoc from './images/doctor.png';
 import { db } from "./Firebase";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { collection ,addDoc ,serverTimestamp } from "firebase/firestore";
 export default function UserQuestion(){
     const [question, setQuestion] = useState("");
@@ -24,7 +25,7 @@ export default function UserQuestion(){
         <div className="flex flex-col md:flex-row gap-8 md:gap-10 px-4 md:px-24 py-7 md:py-28 bg-gradient-to-t from-teal-custom-DarkCayan to-teal-custom-green">
         {/* Right div - العنوان */}
         <div className="md:w-1/2 w-full flex justify-center md:block">
-         <img src={askdoc} className="max-w-md h-auto"/>
+         <LazyLoadImage src={askdoc} alt="doctor" className="max-w-md h-auto"/>
         </div>
   
         {/* Left div - الأسئلة */}

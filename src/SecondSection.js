@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import strongteeth from './images/strongteeth (2).jpeg';
 import weakteeth from './images/weakteeth (1).jpeg'
 export default function SecondSection(){
@@ -12,7 +12,7 @@ export default function SecondSection(){
           
     <div className="flex justify-center flex-col md:flex-row gap-6 md:gap-12 py-10">
        <div className=" h-auto w-full md:max-w-lg flex-1 border-teal-custom-orange border-2 bg-white/60 rounded-lg  md:rounded-lg p-3 flex flex-col justify-center items-center gap-3 transition-all duration-500 hover:scale-105 hover:shadow-md">
-       <img src={strongteeth} alt="strong teeth" className="w-36 h-44 object-cover rounded-md"></img>
+       <LazyLoadImage src={strongteeth} alt="strong teeth" className="w-36 h-44 object-cover rounded-md"/>
          <h3 className="text-teal-custom-orange  text-center text-lg font-semibold px-5  py-2"> لأسنان قوية ولامعة </h3>
           <p className="text-gray-700 sm:text-sm text-xs text-center"> تفتكر ايه ممكن يخلي أسنانك قوية ولامعة </p>
           <Link to="/Strongteeth">
@@ -20,7 +20,7 @@ export default function SecondSection(){
          </Link>
        </div>
        <div className=" h-auto w-full md:max-w-lg flex-1 border-teal-custom-orange border-2 bg-white/60 rounded-lg  md:rounded-lg p-3 flex flex-col justify-center items-center gap-3 transition-all duration-500 hover:scale-105 hover:shadow-md">
-       <img src={weakteeth} alt="weak teeth" className="w-36 h-44 object-cover rounded-md"></img>
+       <LazyLoadImage src={weakteeth} alt="weak teeth" className="w-36 h-44 object-cover rounded-md"/>
          <h3 className="text-teal-custom-orange  text-center text-lg font-semibold px-5  py-2"> لأسنان ضعيفة و مسوسة </h3>
          <p className="text-gray-700 sm:text-sm text-xs text-center">تفتكر ايه ممكن يخلي أسنانك ضعيفة و مسوسة </p>
          <Link to="/weakteeth">

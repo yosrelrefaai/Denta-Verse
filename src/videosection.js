@@ -1,5 +1,6 @@
 import video from './images/video.jpeg';
 import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function Videosection(){
 
     
@@ -38,7 +39,7 @@ export default function Videosection(){
          
                {/* Left div - الأسئلة */}
                <div className="md:w-1/2 w-full flex flex-col justify-center ">
-                <img src={video} alt="Video Section" className='rounded-2xl max-w-md h-auto '></img>
+                <LazyLoadImage src={video} alt="Video Section" className='rounded-2xl max-w-md h-auto '/>
                  
                </div>
              </div>
