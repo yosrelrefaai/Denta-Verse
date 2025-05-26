@@ -24,7 +24,7 @@ export default function Strongteeth(){
           
                 {/* Left div - الأسئلة */}
                 <div className="md:w-1/2 w-full flex flex-col justify-center ">
-                <h2 className=" font-semibold text-teal-custom-orange text-2xl text-center md:text-right">
+                <h2 className=" font-semibold text-teal-custom-orange text-3xl text-center md:text-right">
                     هل تتمنى يكون عندك أسنان قوية وابتسامة لامعة دايمًا؟
                   </h2>
                   <p className='  text-base text-gray-700 font-medium py-10 leading-8'>

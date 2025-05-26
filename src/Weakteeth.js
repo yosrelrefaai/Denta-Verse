@@ -14,10 +14,10 @@ export default function Weakteeth(){
                  
                        {/* Left div - الأسئلة */}
                        <div className="md:w-1/2 w-full flex flex-col justify-center ">
-                       <h2 className=" font-semibold text-teal-custom-orange text-2xl text-center md:text-right">
+                       <h2 className=" font-semibold text-teal-custom-orange text-3xl text-center md:text-right">
                            هل حاسس بألم في سنانك؟ أو شايف لون غريب ؟ ده ممكن يكون تسوس!
                          </h2>
-                         <p className='  text-base text-gray-700 font-medium py-10 leading-8'>
+                         <p className='  text-base text-gray-700 font-medium py-10 leading-8 text-center md:text-right'>
 التسوس بيبدأ صغير، لكن لو ما اهتميناش، بيكبر ويعمل وجع كبير. هنا، هنتكلم عن إيه هو التسوس، بييجي ليه، وازاي نقدر نحمي نفسنا منه بسهولة. خليك معانا عشان تنقذ سنانك وتخلي ابتسامتك دايمًا حلوة!                          </p>
                        </div>
                      </div>

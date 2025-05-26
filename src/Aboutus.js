@@ -13,7 +13,7 @@
         <h2 className=" font-semibold text-teal-custom-DarkCayan text-3xl text-center md:text-right">
         إحنا مين؟ 
           </h2>
-          <p className='  text-base text-gray-700 font-medium py-10 leading-8'>
+          <p className='  text-base text-gray-700 font-medium py-10 leading-8 text-center md:text-right'>
           إحنا مجموعة من أطباء الأسنان بجامعة الإسكندرية هدفنا نكون أصحابك ودليلك في كل اللي مُمكن يرشدك لصحتك وأكلك وأثرهم على أسنانك، عملنالك عالم مليئ بالاستكشافات فيه كل اللي ممكن تحتاجه عشان تاخد المعلومة بالطريقة اللي تحبها.. 
 جاهز تستكشف عالمنا؟
           </p>

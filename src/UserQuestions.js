@@ -33,7 +33,7 @@ export default function UserQuestion(){
         <h2 className=" font-semibold text-white text-3xl text-center md:text-right">
             اسأل طبيبك
           </h2>
-          <p className='  text-base text-gray-300 font-medium py-10 leading-8'>
+          <p className='  text-base text-gray-300 font-medium py-10 leading-8 text-center md:text-right'>
           لو عندك أي سؤال عن أسنانك أو طريقة تنظيفها، ما تترددش تسأل دكتورك!
 سواء حاسس بألم بسيط، أو مش عارف تستخدم الفرشاة كويس، أو محتار تختار معجون مناسب — الدكتور موجود علشان يساعدك.
 مافيش سؤال صغير، وكل سؤال ليه إجابة مهمة تساعدك تحافظ على ابتسامتك الجميلة.
