@@ -17,7 +17,7 @@ export default function Videosection(){
 جاهز؟ شغّل أول فيديو وابدأ تتعلّم!
 وكمان تقدر تتابعنا من خلال التيك توك
           </p>
-          <div className='flex flex-row  sm:flex-row gap-12 lg:gap-4'>
+          <div className='flex flex-row  items-center md:items-start sm:flex-row gap-12 lg:gap-4'>
           <Link to="/videoes">
           <button
           className="bg-gradient-to-r from-teal-custom-Poppy to-teal-custom-orange rounded-full text-white text-base p-3 font-semibold transition-all duration-500 tranform hover:scale-105"

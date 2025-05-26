@@ -22,11 +22,13 @@ export default function Videocomponent(){
         جاهز؟ شغّل أول فيديو وابدأ تتعلّم!
                   </p>
                   <a href='https://www.tiktok.com/@denta.verse?_t=ZS-8wYIzxY8vMG&_r=1'>
+                  <div className='flex flex-col items-center'>
           <button
   className="bg-gradient-to-r from-teal-custom-Poppy to-teal-custom-orange rounded-full text-white text-base p-3 font-semibold transition-all duration-500 transform hover:scale-105 mx-auto md:mx-0"
 >
   اعرف أكتر
 </button>
+</div>
         </a>
                        </div>
                      </div>
