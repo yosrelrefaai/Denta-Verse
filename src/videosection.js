@@ -17,7 +17,7 @@ export default function Videosection(){
 جاهز؟ شغّل أول فيديو وابدأ تتعلّم!
 وكمان تقدر تتابعنا من خلال التيك توك
           </p>
-          <div className='flex flex-col  sm:flex-row gap-12 lg:gap-4'>
+          <div className='flex flex-row  sm:flex-row gap-12 lg:gap-4'>
           <Link to="/videoes">
           <button
           className="bg-gradient-to-r from-teal-custom-Poppy to-teal-custom-orange rounded-full text-white text-base p-3 font-semibold transition-all duration-500 tranform hover:scale-105"
@@ -39,7 +39,7 @@ export default function Videosection(){
          
                {/* Left div - الأسئلة */}
                <div className="md:w-1/2 w-full flex flex-col justify-center ">
-                <LazyLoadImage src={video} alt="Video Section" className='rounded-2xl max-w-md h-auto '/>
+                <LazyLoadImage src={video} alt="Video Section" className='rounded-2xl max-w-sm h-auto '/>
                  
                </div>
              </div>

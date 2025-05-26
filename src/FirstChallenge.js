@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { data } from "./data";
-import background from './images/7701518.jpg';
+
 
 export default function FirstChallenge() {
   const [index, setIndex] = useState(0);

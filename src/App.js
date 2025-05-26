@@ -38,7 +38,7 @@ function App() {
   }
   return (
     
-      <div>
+      <div  className="overflow-x-hidden">
         <Header/>
         <Routes>
           <Route index element={<Home/>}/>
