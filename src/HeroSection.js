@@ -1,6 +1,6 @@
 
 import { TypeAnimation } from 'react-type-animation';
-import motion from './images/Bassem.jpeg';
+import motion from './images/Bassem.png';
 import { Link } from 'react-router-dom';
 export default function HeroSection(){
     return(
@@ -49,7 +49,7 @@ export default function HeroSection(){
 
       {/* Left div - الأسئلة */}
       <div className="md:w-1/2 w-full">
-        <img src={motion} className='max-w-md h-auto -mt-16'/>
+        <img src={motion} className='max-w-md h-auto -mt-16 max-w-xs md:max-w-md'/>
       </div>
     </div>
     )

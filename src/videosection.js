@@ -39,7 +39,7 @@ export default function Videosection(){
          
                {/* Left div - الأسئلة */}
                <div className="md:w-1/2 w-full flex flex-col justify-center ">
-                <LazyLoadImage src={video} alt="Video Section" className='rounded-2xl max-w-sm h-auto '/>
+                <LazyLoadImage src={video} alt="Video Section" className='rounded-2xl max-w-xs md:max-w-md h-auto '/>
                  
                </div>
              </div>

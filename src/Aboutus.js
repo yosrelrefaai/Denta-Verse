@@ -5,7 +5,7 @@
 <div className=" px-24 py-28 flex flex-col md:flex-row gap-8 md:gap-12 px-4 md:px-24 py-7 md:py-28 bg-white">
         {/* Right div - العنوان */}
         <div className="md:w-1/2 w-full flex justify-center md:block">
-            <LazyLoadImage src={team} alt="Team" className='rounded-2xl max-w-sm h-auto '/>
+            <LazyLoadImage src={team} alt="Team" className='rounded-2xl max-w-xs md:max-w-md h-auto '/>
         </div>
   
         {/* Left div - الأسئلة */}
