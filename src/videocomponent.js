@@ -23,11 +23,10 @@ export default function Videocomponent(){
                   </p>
                   <a href='https://www.tiktok.com/@denta.verse?_t=ZS-8wYIzxY8vMG&_r=1'>
           <button
-          className="bg-gradient-to-r from-teal-custom-Poppy to-teal-custom-orange rounded-full text-white text-base p-3 font-semibold transition-all duration-500 tranform hover:scale-105"
-        >
-          
-          اعرف أكتر
-        </button>
+  className="bg-gradient-to-r from-teal-custom-Poppy to-teal-custom-orange rounded-full text-white text-base p-3 font-semibold transition-all duration-500 transform hover:scale-105 text-center md:text-right"
+>
+  اعرف أكتر
+</button>
         </a>
                        </div>
                      </div>
@@ -36,7 +35,7 @@ export default function Videocomponent(){
           <h2 className="text-3xl text-center text-white font-bold   "> ما وراء التحدي... </h2>
           
     <div className="flex justify-center flex-col md:flex-row gap-6 md:gap-12 py-10">
-       <div className=" h-auto w-full md:max-w-lg flex-1 border-teal-custom-orange border-2 bg-white/60 rounded-lg  md:rounded-lg p-3 flex flex-col justify-center items-center gap-3 transition-all duration-500 hover:scale-105 hover:shadow-md">
+       <div className=" h-auto w-full max-w-md md:max-w-lg flex-1 border-teal-custom-orange border-2 bg-white/60 rounded-lg  md:rounded-lg p-3 flex flex-col justify-center items-center gap-3 transition-all duration-500 hover:scale-105 hover:shadow-md">
            <iframe
             src="https://drive.google.com/file/d/1vPoSP__4q8Gj9zHwsU707CtEud1-9jl9/preview"
             width="100%"
@@ -45,7 +44,7 @@ export default function Videocomponent(){
             className="rounded-lg"
              ></iframe>
        </div>
-       <div className=" h-auto w-full md:max-w-lg flex-1 border-teal-custom-orange border-2 bg-white/60 rounded-lg  md:rounded-lg p-3 flex flex-col justify-center items-center gap-3 transition-all duration-500 hover:scale-105 hover:shadow-md">
+       <div className=" h-auto w-full max-w-md md:max-w-lg flex-1 border-teal-custom-orange border-2 bg-white/60 rounded-lg  md:rounded-lg p-3 flex flex-col justify-center items-center gap-3 transition-all duration-500 hover:scale-105 hover:shadow-md">
       
          <iframe
            src="https://drive.google.com/file/d/1CExiZaPZben57d5GBwht3A0TephVrK6U/preview"

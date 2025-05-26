@@ -11,7 +11,7 @@ export default function Videosection(){
                <h2 className=" font-semibold text-teal-custom-DarkCayan text-3xl text-center md:text-right">
                دقايق اتفرج... وسنانك تشكرك!
           </h2>
-          <p className='  text-base text-gray-700 font-medium py-10 leading-8'>
+          <p className='  text-base text-gray-700 font-medium py-10 leading-8 text-center md:text-right'>
           هنا هتلاقي فيديوهات ممتعة وبسيطة بتشرحلك إزاي تحافظ على أسنانك وتتعلم الحاجات المهمة علشان تفضل ابتسامتك دايمًا حلوة!
 <br></br> كل فيديو قصير ومفيد، ومشاهدة الفيديوهات دي هي أول خطوة لازم تعملها قبل ما تبدأ تحل التحديات!<br></br>
 جاهز؟ شغّل أول فيديو وابدأ تتعلّم!
