@@ -22,7 +22,7 @@ export default function Weakteeth(){
                        </div>
                      </div>
                       {/* start of flip cards*/}
-                       <div class="px-24 py-28 bg-gradient-to-t from-teal-custom-DarkCayan to-teal-custom-green  flex flex-wrap justify-center  flex-col md:flex-row gap-6 md:gap-12 py-10">
+                       <div class="px-6 md:px-24 py-28 bg-gradient-to-t from-teal-custom-DarkCayan to-teal-custom-green flex flex-wrap justify-center flex-col md:flex-row gap-6 md:gap-12">
                                    {/*first box*/}
                                 <div className="w-64 h-80 [perspective:1000px] ">
                                   <div className=" relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
@@ -39,7 +39,7 @@ export default function Weakteeth(){
                                   <div className=" w-64 h-80 [perspective:1000px] ">
                                   <div className=" relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                                      <div className="absolute w-full h-full [backface-visibility:hidden] bg-white/50 border border-teal-custom-orange rounded-2xl flex  flex-col items-center justify-center">
-                                     <LazyLoadImage src={sugarydrinks} alt="sugarydrinksi" className="w-52 h-52 object-cover rounded-md"/>
+                                     <LazyLoadImage src={sugarydrinks} alt="sugarydrinksi" className="w-52 h-52 object-cover rounded-md max-w-xs md:max-w-md"/>
                                      <h3 className="text-teal-custom-orange px-5 py-5 text-center text-lg font-semibold "> المشروبات الغازية والعصاير الصناعية</h3>
                                      </div>
                                      <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/60 border border-teal-custom-orange rounded-lg shadow-lg flex items-center justify-center text-gray-700 text-center px-4">
