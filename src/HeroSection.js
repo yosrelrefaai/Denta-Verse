@@ -9,7 +9,7 @@ export default function HeroSection(){
       {/* Right div - العنوان */}
       <div className="md:w-1/2 pt-7 w-full flex justify-center md:block">
         <div className='max-w-xl  text-center lg:text-start '>
-                <h1 className="text-teal-custom-DarkCayan font-bold  leading-relaxed text-3xl sm:text-3xl md:text-4xl">
+                <h1 className="text-teal-custom-DarkCayan font-bold  leading-relaxed text-3xl  md:text-4xl">
                     مغامرة جديدة لإكتشاف عالم الأسنان مع {''}
                     <span>
                     <TypeAnimation 
@@ -27,8 +27,9 @@ export default function HeroSection(){
                        className="
                          text-teal-custom-Poppy
                          font-bold
-                         text-2xl sm:text-3xl md:text-4xl
+                         text-3xl  md:text-4xl
                          inline-block
+                         min-h-[40]
                        "
                      />
 
