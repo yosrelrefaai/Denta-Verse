@@ -3,7 +3,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 export default function ThirdSection(){
     return(
-        <div className="px-10 py-28 md:px-24 py-28" id="challenges"> 
+        <div className="px-10 py-10 md:px-24 py-28" id="challenges"> 
           <div>
             <h2 className="text-3xl text-teal-custom-DarkCayan font-bold  align-middle flex justify-center">التحديات</h2>
             <p className='  text-base text-gray-700 font-medium py-10 leading-8 text-center'>

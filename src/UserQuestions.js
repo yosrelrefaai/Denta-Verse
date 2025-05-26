@@ -22,7 +22,7 @@ export default function UserQuestion(){
           }
     };
     return(
-        <div className="flex flex-col md:flex-row gap-8 md:gap-10 px-4 md:px-24 py-7 md:py-28 bg-gradient-to-t from-teal-custom-DarkCayan to-teal-custom-green">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-10 px-10 py-10 md:px-24 py-28 bg-gradient-to-t from-teal-custom-DarkCayan to-teal-custom-green">
         {/* Right div - العنوان */}
         <div className="md:w-1/2 w-full flex justify-center md:block">
          <LazyLoadImage src={askdoc} alt="doctor" className="max-w-sm h-auto"/>

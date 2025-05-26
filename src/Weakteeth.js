@@ -6,7 +6,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function Weakteeth(){
     return(
        <div>
-               <div className="px-24 py-28 flex flex-col md:flex-row gap-8 md:gap-10 px-4 md:px-24 py-7 md:py-28 bg-white">
+               <div className=" flex flex-col md:flex-row gap-8 md:gap-10 px-10 py-10 md:px-24 py-28 bg-white">
                        {/* Right div - العنوان */}
                        <div className="md:w-1/2 w-full flex justify-center md:block">
                         <LazyLoadImage src={weakteeth} alt='weakteeth' className="max-w-xs md:max-w-md h-auto rounded-lg"/>
