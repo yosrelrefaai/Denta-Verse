@@ -1,4 +1,4 @@
- import team from './images/team (3) .jpeg'
+ import team from './images/team (3).jpeg'
  import { LazyLoadImage } from 'react-lazy-load-image-component';
  export default function Aboutus(){
     return(
