@@ -33,7 +33,7 @@ export default function Strongteeth(){
                 </div>
               </div>
                {/* start of flip cards*/}
-                <div class="px-24 py-28 bg-gradient-to-t from-teal-custom-DarkCayan to-teal-custom-green  flex flex-wrap justify-center  flex-col md:flex-row gap-6 md:gap-12 py-10">
+                <div class="px-6 md:px-24 py-28 bg-gradient-to-t from-teal-custom-DarkCayan to-teal-custom-green flex flex-wrap justify-center flex-col md:flex-row gap-6 md:gap-12">
                             {/*first box*/}
                          <div className="w-64 h-80 [perspective:1000px] ">
                            <div className=" relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
