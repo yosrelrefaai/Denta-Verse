@@ -31,7 +31,7 @@ export default function Videocomponent(){
                        </div>
                      </div>
 
-                     <div className="px-24 py-28 bg-gradient-to-br from-teal-custom-DarkCayan to-teal-custom-green ">
+                     <div className="px-10 py-28 md:px-24 py-28 bg-gradient-to-br from-teal-custom-DarkCayan to-teal-custom-green ">
           <h2 className="text-3xl text-center text-white font-bold   "> ما وراء التحدي... </h2>
           
     <div className="flex justify-center flex-col md:flex-row gap-6 md:gap-12 py-10">

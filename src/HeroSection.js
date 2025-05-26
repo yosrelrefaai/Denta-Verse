@@ -10,7 +10,7 @@ export default function HeroSection(){
       <div className="md:w-1/2 pt-7 w-full flex justify-center md:block">
         <div className='max-w-xl  text-center lg:text-start '>
                 <h1 className="text-teal-custom-DarkCayan font-bold  leading-relaxed text-3xl  md:text-4xl">
-                    مغامرة جديدة لإكتشاف عالم الأسنان مع {''}
+                    مغامرة لإكتشاف عالم الأسنان مع {''}
                     <span>
                     <TypeAnimation 
                          sequence={[

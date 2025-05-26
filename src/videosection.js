@@ -5,7 +5,7 @@ export default function Videosection(){
 
     
     return(
-       <div id="videoes" className="flex flex-col md:flex-row gap-8 md:gap-40 px-4 md:px-24 py-7 md:py-28 bg-slate-100">
+       <div id="videoes" className="flex flex-col md:flex-row gap-8 md:gap-40 px-10 py-28 md:px-24 py-28 md:py-28 bg-slate-100">
                {/* Right div - العنوان */}
                <div className="pt-10 md:w-1/2 w-full flex flex-col justify-center md:block">
                <h2 className=" font-semibold text-teal-custom-DarkCayan text-3xl text-center md:text-right">
