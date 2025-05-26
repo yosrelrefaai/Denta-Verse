@@ -9,12 +9,12 @@ export default function Weakteeth(){
                <div className="px-24 py-28 flex flex-col md:flex-row gap-8 md:gap-10 px-4 md:px-24 py-7 md:py-28 bg-white">
                        {/* Right div - العنوان */}
                        <div className="md:w-1/2 w-full flex justify-center md:block">
-                        <LazyLoadImage src={weakteeth} alt='weakteeth' className="max-w-md h-auto rounded-lg"/>
+                        <LazyLoadImage src={weakteeth} alt='weakteeth' className="max-w-xs md:max-w-md h-auto rounded-lg"/>
                        </div>
                  
                        {/* Left div - الأسئلة */}
                        <div className="md:w-1/2 w-full flex flex-col justify-center ">
-                       <h2 className=" font-semibold text-teal-custom-orange text-3xl text-center md:text-right">
+                       <h2 className=" font-semibold text-teal-custom-orange text-2xl text-center md:text-right">
                            هل حاسس بألم في سنانك؟ أو شايف لون غريب ؟ ده ممكن يكون تسوس!
                          </h2>
                          <p className='  text-base text-gray-700 font-medium py-10 leading-8'>
@@ -22,7 +22,7 @@ export default function Weakteeth(){
                        </div>
                      </div>
                       {/* start of flip cards*/}
-                       <div class="px-6 md:px-24 py-28 bg-gradient-to-t from-teal-custom-DarkCayan to-teal-custom-green flex flex-wrap justify-center flex-col md:flex-row gap-6 md:gap-12">
+                       <div class="px-6 md:px-24 py-20 bg-gradient-to-t from-teal-custom-DarkCayan to-teal-custom-green flex flex-wrap justify-center items-center md:flex-row gap-6 md:gap-12 text-center">
                                    {/*first box*/}
                                 <div className="w-64 h-80 [perspective:1000px] ">
                                   <div className=" relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">

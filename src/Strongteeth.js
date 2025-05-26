@@ -19,12 +19,12 @@ export default function Strongteeth(){
         <div className="px-24 py-28 flex flex-col md:flex-row gap-8 md:gap-10 px-4 md:px-24 py-7 md:py-28 bg-white">
                 {/* Right div - العنوان */}
                 <div className="md:w-1/2 w-full flex justify-center md:block">
-                 <LazyLoadImage alt='strongtheet' src={strongtheet} className="max-w-md h-auto rounded-lg"/>
+                 <LazyLoadImage alt='strongtheet' src={strongtheet} className="max-w-xs md:max-w-md h-auto rounded-lg"/>
                 </div>
           
                 {/* Left div - الأسئلة */}
                 <div className="md:w-1/2 w-full flex flex-col justify-center ">
-                <h2 className=" font-semibold text-teal-custom-orange text-3xl text-center md:text-right">
+                <h2 className=" font-semibold text-teal-custom-orange text-2xl text-center md:text-right">
                     هل تتمنى يكون عندك أسنان قوية وابتسامة لامعة دايمًا؟
                   </h2>
                   <p className='  text-base text-gray-700 font-medium py-10 leading-8'>
@@ -33,12 +33,12 @@ export default function Strongteeth(){
                 </div>
               </div>
                {/* start of flip cards*/}
-                <div class="px-6 md:px-24 py-28 bg-gradient-to-t from-teal-custom-DarkCayan to-teal-custom-green flex flex-wrap justify-center flex-col md:flex-row gap-6 md:gap-12">
+                <div class="px-6 md:px-24 py-20 bg-gradient-to-t from-teal-custom-DarkCayan to-teal-custom-green flex flex-wrap justify-center items-center md:flex-row gap-6 md:gap-12 text-center">
                             {/*first box*/}
                          <div className="w-64 h-80 [perspective:1000px] ">
                            <div className=" relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
                               <div className="absolute w-full h-full [backface-visibility:hidden] bg-white/50 border border-teal-custom-orange rounded-2xl flex  flex-col items-center justify-center">
-                              <LazyLoadImage src={strawbarry} alt="strawbarry" className=" object-cover rounded-md max-w-xs md:max-w-md"/>
+                              <LazyLoadImage src={strawbarry} alt="strawbarry" className="w-52 h-52 object-cover rounded-md max-w-xs md:max-w-md"/>
                            <h3 className="text-teal-custom-orange px-5 py-5 text-center text-lg font-semibold "> الفراولة </h3>
                               </div>
                               <div class="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/60 border border-teal-custom-orange rounded-lg shadow-lg flex items-center justify-center text-gray-700 text-center px-4">
